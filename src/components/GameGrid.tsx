@@ -9,7 +9,7 @@ const skeletons = [1,2,3,4,5,6]
 
 
 const GameGrid = () => {
-    const { games, error,  isLoading } = useGames()
+    const { data: games, isLoading } = useGames()
   return (
     <>
       <SimpleGrid columns={{
