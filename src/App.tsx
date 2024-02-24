@@ -13,13 +13,17 @@ const App = () => {
           "aside main"`
         }
       }
+    templateColumns={{
+      base: '1fr',
+      lg: '200px 1fr' 
+    }}
     
 >
   <GridItem  area={'nav'}>
     <Navbar />
   </GridItem>
   <Show above="lg">
-  <GridItem  area={'aside'}>
+  <GridItem  area={'aside'} px={5}>
     <GenreList />
   </GridItem>
   </Show>
