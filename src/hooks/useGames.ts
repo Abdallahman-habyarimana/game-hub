@@ -12,7 +12,7 @@ export interface Game {
     id: number;
     name: string;
     background_image: string
-    parent_platform: { platform: Platform } [];
+    parent_platforms: { platform: Platform } [];
     metacritic: number;
 }
 
@@ -33,6 +33,7 @@ const useGames = () => {
         apiClient.get<FetchGamesResponse>('/games', { signal: controller.signal})
         .then(res => {
             setGames(res.data.results)
+            console.log(games);
             setIsLoading(false)
         })
         .catch((err) => {
