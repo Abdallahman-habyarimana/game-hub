@@ -6,7 +6,7 @@ import ColorModeSwitch from './ColorModeSwitch'
 import SearchInput from './SearchInput'
 
 interface Props {
-  onSearch: (searchGame: string) => void
+  onSearch: (searchText: string) => void
 }
 
 const Navbar = ({ onSearch } : Props) => {
